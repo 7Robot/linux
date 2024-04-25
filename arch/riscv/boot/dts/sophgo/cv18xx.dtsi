@@ -175,6 +175,58 @@
 			status = "disabled";
 		};
 
+
+		i2c0: i2c@04000000 {
+			compatible = "snps,designware-i2c";
+			clocks = <&osc>;
+			reg = <0x0 0x04000000 0x0 0x1000>;
+			clock-frequency = <400000>;
+
+			#size-cells = <0x0>;
+			#address-cells = <0x1>;
+		};
+
+		i2c1: i2c@04010000 {
+			compatible = "snps,designware-i2c";
+			clocks = <&osc>;
+			reg = <0x0 0x04010000 0x0 0x1000>;
+			clock-frequency = <400000>;
+
+			#size-cells = <0x0>;
+			#address-cells = <0x1>;
+		};
+
+		i2c2: i2c@04020000 {
+			compatible = "snps,designware-i2c";
+			clocks = <&osc>;
+			reg = <0x0 0x04020000 0x0 0x1000>;
+			clock-frequency = <100000>;
+
+			#size-cells = <0x0>;
+			#address-cells = <0x1>;
+		};
+
+		i2c3: i2c@04030000 {
+			compatible = "snps,designware-i2c";
+			clocks = <&osc>;
+			reg = <0x0 0x04030000 0x0 0x1000>;
+			clock-frequency = <400000>;
+
+			#size-cells = <0x0>;
+			#address-cells = <0x1>;
+		};
+
+		i2c4: i2c@04040000 {
+			compatible = "snps,designware-i2c";
+			clocks = <&osc>;
+			reg = <0x0 0x04040000 0x0 0x1000>;
+			clock-frequency = <400000>;
+
+			#size-cells = <0x0>;
+			#address-cells = <0x1>;
+		};
+
+
 		plic: interrupt-controller@70000000 {
 			reg = <0x70000000 0x4000000>;
 			interrupts-extended = <&cpu0_intc 11>, <&cpu0_intc 9>;
