@@ -358,5 +358,33 @@
 			reg = <0x74000000 0x10000>;
 			interrupts-extended = <&cpu0_intc 3>, <&cpu0_intc 7>;
 		};
+
+		pwm0: pwm@3060000 {
+			compatible = "sophgo,cv1800-pwm";
+			reg = <0x3060000 0x1000>;
+			clocks = <&clk CLK_PWM>;
+			#pwm-cells = <3>;
+		    };
+
+		pwm1: pwm@3061000 {
+			compatible = "sophgo,cv1800-pwm";
+			reg = <0x3061000 0x1000>;
+			clocks = <&clk CLK_PWM>;
+			#pwm-cells = <3>;
+		    };
+
+		pwm2: pwm@3062000 {
+			compatible = "sophgo,cv1800-pwm";
+			reg = <0x3062000 0x1000>;
+			clocks = <&clk CLK_PWM>;
+			#pwm-cells = <3>;
+		    };
+
+		pwm3: pwm@3063000 {
+			compatible = "sophgo,cv1800-pwm";
+			reg = <0x3063000 0x1000>;
+			clocks = <&clk CLK_PWM>;
+			#pwm-cells = <3>;
+		    };
 	};
 };
