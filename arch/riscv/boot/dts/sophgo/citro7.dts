@@ -1,23 +1,14 @@
 // SPDX-License-Identifier: (GPL-2.0 OR MIT)
 /*
- * Copyright (C) 2023 Jisheng Zhang <jszhang@kernel.org>
+ * Copyright (C) 2023 Inochi Amaoto <inochiama@outlook.com>
  */
 
-/dts-v1/;
-
-#include "cv1800b.dtsi"
+#include <dt-bindings/interrupt-controller/irq.h>
+#include "cv18xx.dtsi"
 
 / {
-	model = "Milk-V Duo";
-	compatible = "milkv,duo", "sophgo,cv1800b";
-
-	aliases {
-		serial0 = &uart0;
-		serial1 = &uart1;
-		serial2 = &uart2;
-		serial3 = &uart3;
-		serial4 = &uart4;
-	};
+	model = "Huashan Pi";
+	compatible = "7robot,citro7", "sophgo,sg2002";
 
 	chosen {
 		stdout-path = "serial0:115200n8";
@@ -25,14 +16,14 @@
 
 	memory@80000000 {
 		device_type = "memory";
-		reg = <0x80000000 0x3f40000>;
+		reg = <0x80000000 0x10000000>;
 	};
 };
 
-&osc {
-	clock-frequency = <25000000>;
+&plic {
+	compatible = "sophgo,cv1812h-plic", "thead,c900-plic";
 };
 
-&uart0 {
-	status = "okay";
+&clint {
+	compatible = "sophgo,cv1812h-clint", "thead,c900-clint";
 };

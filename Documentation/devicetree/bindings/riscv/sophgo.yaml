@@ -9,6 +9,7 @@ title: Sophgo SoC-based boards
 maintainers:
   - Chao Wei <chao.wei@sophgo.com>
   - Chen Wang <unicorn_wang@outlook.com>
+  - Thomas Bonnefille <thomas@tbonnefille.fr>
 
 description:
   Sophgo SoC-based boards
@@ -26,6 +27,10 @@ properties:
           - enum:
               - sophgo,huashan-pi
           - const: sophgo,cv1812h
+      - items:
+          - enum:
+              - 7robot,citro7
+          - const: sophgo,sg2002
       - items:
           - enum:
               - milkv,pioneer
