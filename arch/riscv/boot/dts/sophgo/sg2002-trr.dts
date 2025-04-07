@@ -137,13 +137,52 @@
 	pinctrl-names = "default";
 	clock-frequency = <400000>;
 
-        bmi160@69 {
-            compatible = "bosch,bmi160";
-            reg = <0x69>;
-            mount-matrix = "0", "1", "0",
-                           "-1", "0", "0",
-                           "0", "0", "1";
+        proximity@31 {
+            compatible = "st,vl53l0x";
+            reg = <0x31>;
         };
+
+        proximity@32 {
+            compatible = "st,vl53l0x";
+            reg = <0x32>;
+        };
+
+        proximity@33 {
+            compatible = "st,vl53l0x";
+            reg = <0x33>;
+        };
+
+        proximity@34 {
+            compatible = "st,vl53l0x";
+            reg = <0x34>;
+        };
+
+        proximity@35 {
+            compatible = "st,vl53l0x";
+            reg = <0x35>;
+        };
+
+        proximity@36 {
+            compatible = "st,vl53l0x";
+            reg = <0x36>;
+        };
+
+	gpio@20 {
+		compatible = "nxp,pca9535";
+		reg = <0x20>;
+		gpio-controller;
+		#gpio-cells = <2>;
+
+		gpio-line-names =
+			"tof-1","tof-2",
+			"tof-3","tof-4",
+			"tof-5","tof-6",
+			"","",
+			"","",
+			"","",
+			"","",
+			"","";
+	};
 };
 
 &pwm1 {
